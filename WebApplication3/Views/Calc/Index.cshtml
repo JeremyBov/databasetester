@@ -1,0 +1,118 @@
+﻿@model WebApplication3.Models.calc
+@{
+    ViewBag.Title = "Index";
+}
+
+    <html>
+
+    <body>
+
+        <div class="row">
+            @using (Html.BeginForm("/Index", "calc", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="no1">No1</label>
+                    <input type="text" class="form-control" id="no1" name="no1" value="@Model.no1" />
+                </div>
+                <div class="form-group">
+                    <label for="no2">No2</label>
+                    <input type="text" class="form-control" id="no2" name="no2" value="@Model.no2" />
+                </div>
+                <div class="form-group">
+                    <label for="tot">Uitkomst</label>
+                    <input type="text" class="form-control" id="tot" name="tot" value="@Model.truetotal" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info" id="add" value="add" name="calculate">+</button>
+                    <button type="submit" class="btn btn-info" id="min" value="min" name="calculate">-</button>
+                    <button type="submit" class="btn btn-info" id="sub" value="sub" name="calculate">*</button>
+                    <button type="submit" class="btn btn-info" id="divv" value="divv" name="calculate">/</button>
+                </div>
+
+                <script>
+                    function input1() {
+                        document.getElementById("area").value += document.getElementById("button1").value;
+                    }
+                    function input2() {
+                        document.getElementById("area").value += document.getElementById("button2").value;
+                    }
+                    function input3() {
+                        document.getElementById("area").value += document.getElementById("button3").value;
+                    }
+                    function input4() {
+                        document.getElementById("area").value += document.getElementById("button4").value;
+                    }
+                    function input5() {
+                        document.getElementById("area").value += document.getElementById("button5").value;
+                    }
+                    function input6() {
+                        document.getElementById("area").value += document.getElementById("button6").value;
+                    }
+                    function input7() {
+                        document.getElementById("area").value += document.getElementById("button7").value;
+                    }
+                    function input8() {
+                        document.getElementById("area").value += document.getElementById("button8").value;
+                    }
+                    function input9() {
+                        document.getElementById("area").value += document.getElementById("button9").value;
+                    }
+                    function input0() {
+                        document.getElementById("area").value += document.getElementById("button0").value;
+                    }
+                    function inputback() {
+                        document.getElementById("area").value = '';
+                    }
+                    function inputdiv() {
+                        document.getElementById("area").value += document.getElementById("button/").value;
+                    }
+                    function inputmin() {
+                        document.getElementById("area").value += document.getElementById("button-").value;
+                    }
+                    function inputdot() {
+                        document.getElementById("area").value += document.getElementById("button.").value;
+                    }
+                    function inputequals() {
+                        document.getElementById("area").value += document.getElementById("button=").value;
+                    }
+                    function inputplus() {
+                        document.getElementById("area").value += document.getElementById("button+").value;
+                    }
+                </script>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="area" name="area" value="@Model.area" />
+                </div>
+                    <div class="form-group">
+                        <button onclick='input7()' class="btn btn-info" type='button' value='7' id='button7'>7</button>
+                        <button onclick='input8()' class="btn btn-info" type='button' value='8' id='button8'>8</button>
+                        <button onclick='input9()' class="btn btn-info" type='button' value='9' id='button9'>9</button>
+                        <button onclick='inputback()' class="btn btn-info" type='button' value='<' id='button<'>C</button>
+                    </div>
+                    <div class="form-group">
+                        <button onclick='input4()' class="btn btn-info" type='button' value='4' id='button4'>4</button>
+                        <button onclick='input5()' class="btn btn-info" type='button' value='5' id='button5'>5</button>
+                        <button onclick='input6()' class="btn btn-info" type='button' value='6' id='button6'>6</button>
+                        <button onclick='inputdiv()' class="btn btn-info" type='button' value='/' id='button/'>/</button>
+                    </div>
+                    <div class="form-group">
+                        <button onclick='input1()' class="btn btn-info" type='button' value='1' id='button1'>1</button>
+                        <button onclick='input2()' class="btn btn-info" type='button' value='2' id='button2'>2</button>
+                        <button onclick='input3()' class="btn btn-info" type='button' value='3' id='button3'>3</button>
+                        <button onclick='inputmin()' class="btn btn-info" type='button' value='-' id='button-'>-</button>
+                    </div>
+                    <div class="form-group">
+                        <button onclick='input0()' class="btn btn-info" type='button' value='0' id='button0'>0</button>
+                        <button onclick='inputdot()' class="btn btn-info" type='button' value='.' id='button.'>.</button>
+                        <button onclick='inputequals()'type="submit" class="btn btn-info" id="equals" value="equals" name="calculate">=</button>
+                        <button onclick='inputplus()' class="btn btn-info" type='button' value='+' id='button+'>+</button>
+                    </div>
+
+                    }
+                </div>
+
+
+</body>
+    
+    </html>
+
